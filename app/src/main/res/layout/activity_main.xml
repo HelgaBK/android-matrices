@@ -14,7 +14,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView1_4"
         app:layout_constraintStart_toEndOf="@+id/textView0_3" />
 
@@ -26,7 +26,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2_4"
         app:layout_constraintStart_toEndOf="@+id/textView1_3" />
 
@@ -38,7 +38,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView1_3"
         app:layout_constraintStart_toEndOf="@+id/textView0_2" />
 
@@ -50,7 +50,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView1_0"
         app:layout_constraintEnd_toStartOf="@+id/textView0_1" />
 
@@ -62,7 +62,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2_0"
         app:layout_constraintEnd_toStartOf="@+id/textView1_1" />
 
@@ -74,7 +74,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView1_1"
         app:layout_constraintEnd_toStartOf="@+id/textView0_2" />
 
@@ -86,7 +86,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2_1"
         app:layout_constraintEnd_toStartOf="@+id/textView1_2" />
 
@@ -99,7 +99,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView1_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -111,7 +111,7 @@
         android:layout_marginEnd="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView4_2"
         app:layout_constraintEnd_toStartOf="@+id/textView4_2" />
 
@@ -123,7 +123,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView4_1"
         app:layout_constraintEnd_toStartOf="@+id/textView3_2" />
 
@@ -135,7 +135,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3_1"
         app:layout_constraintEnd_toStartOf="@+id/textView2_2" />
 
@@ -147,7 +147,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView4_0"
         app:layout_constraintEnd_toStartOf="@+id/textView3_1" />
 
@@ -159,7 +159,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3_0"
         app:layout_constraintEnd_toStartOf="@+id/textView2_1" />
 
@@ -170,7 +170,7 @@
         android:layout_marginStart="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView4_2"
         app:layout_constraintStart_toEndOf="@+id/textView4_2" />
 
@@ -182,7 +182,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView4_3"
         app:layout_constraintStart_toEndOf="@+id/textView3_2" />
 
@@ -194,7 +194,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3_3"
         app:layout_constraintStart_toEndOf="@+id/textView2_2" />
 
@@ -206,7 +206,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2_3"
         app:layout_constraintStart_toEndOf="@+id/textView1_2" />
 
@@ -217,7 +217,7 @@
         android:layout_marginStart="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView4_2"
         app:layout_constraintStart_toEndOf="@+id/textView4_3" />
 
@@ -229,7 +229,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView4_4"
         app:layout_constraintStart_toEndOf="@+id/textView3_3" />
 
@@ -241,7 +241,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3_4"
         app:layout_constraintStart_toEndOf="@+id/textView2_3" />
 
@@ -252,7 +252,7 @@
         android:layout_marginEnd="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView4_2"
         app:layout_constraintEnd_toStartOf="@+id/textView4_1" />
 
@@ -265,7 +265,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -313,6 +313,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:text="Calculate"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -326,7 +327,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonCalculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -340,7 +341,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView4_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -354,7 +355,7 @@
         android:layout_marginBottom="16dp"
         android:text="T.TT"
         android:textColor="@color/darkTextColor"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

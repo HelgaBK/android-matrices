@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     //  Data classes of each Matrix
     SingleMatrix dataA = new SingleMatrix();
     SingleMatrix dataB = new SingleMatrix();
+    SingleMatrix res = new SingleMatrix();
 
     //  Spinner of operators
     Spinner operators;
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
     //  A and B matrices
     TextView matrixA;
     TextView matrixB;
+
+    //  A res matrix
+    TextView[][] matrix = new TextView[5][5];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,35 @@ public class MainActivity extends AppCompatActivity {
         //  Get matrices views
         matrixA = findViewById(R.id.matrixA);
         matrixB = findViewById(R.id.matrixB);
+
+        //  Get result matrix view
+        matrix[0][0] = findViewById(R.id.textView0_0);
+        matrix[0][1] = findViewById(R.id.textView0_1);
+        matrix[0][2] = findViewById(R.id.textView0_2);
+        matrix[0][3] = findViewById(R.id.textView0_3);
+        matrix[0][4] = findViewById(R.id.textView0_4);
+        matrix[1][0] = findViewById(R.id.textView1_0);
+        matrix[1][1] = findViewById(R.id.textView1_1);
+        matrix[1][2] = findViewById(R.id.textView1_2);
+        matrix[1][3] = findViewById(R.id.textView1_3);
+        matrix[1][4] = findViewById(R.id.textView1_4);
+        matrix[2][0] = findViewById(R.id.textView2_0);
+        matrix[2][1] = findViewById(R.id.textView2_1);
+        matrix[2][2] = findViewById(R.id.textView2_2);
+        matrix[2][3] = findViewById(R.id.textView2_3);
+        matrix[2][4] = findViewById(R.id.textView2_4);
+        matrix[3][0] = findViewById(R.id.textView3_0);
+        matrix[3][1] = findViewById(R.id.textView3_1);
+        matrix[3][2] = findViewById(R.id.textView3_2);
+        matrix[3][3] = findViewById(R.id.textView3_3);
+        matrix[3][4] = findViewById(R.id.textView3_4);
+        matrix[4][0] = findViewById(R.id.textView4_0);
+        matrix[4][1] = findViewById(R.id.textView4_1);
+        matrix[4][2] = findViewById(R.id.textView4_2);
+        matrix[4][3] = findViewById(R.id.textView4_3);
+        matrix[4][4] = findViewById(R.id.textView4_4);
+
+        update();
 
         //  Input matrices
         matrixA.setOnClickListener(new View.OnClickListener() {
@@ -104,5 +137,23 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    public void update() {
+        for (int i = 0; i < 5; i++)
+            for (int j = 0; j < 5; j++) {
+                matrix[i][j].setText(String.valueOf(res.getValue(i, j)));
+                matrix[i][j].setTextColor(getResources().getColor(R.color.darkTextColor));
+            }
+        for (int i = res.getColumns(); i < 5; i++)
+            for (int j = 0; j < 5; j++) {
+                //matrix[j][i].setInputType(InputType.TYPE_NULL);
+                matrix[j][i].setTextColor(getResources().getColor(R.color.colorAccent));
+            }
+        for (int i = 0; i < 5; i++)
+            for (int j = res.getRows(); j < 5; j++) {
+                // matrix[i][j].setInputType(InputType.TYPE_NULL);
+                matrix[j][i].setTextColor(getResources().getColor(R.color.colorAccent));
+            }
     }
 }
