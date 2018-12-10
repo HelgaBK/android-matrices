@@ -3,7 +3,9 @@ package com.tochanenko.karpyshyn.androidmatrices;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.InputType;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +29,8 @@ public class MatrixActivity extends AppCompatActivity {
 
     SeekBar seekRows;
     SeekBar seekColumns;
+
+    int type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,7 +121,7 @@ public class MatrixActivity extends AppCompatActivity {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                currentMatrix.setRows(seekRows.getProgress());
+                currentMatrix.setRows(seekRows.getProgress() + 1);
                 update();
             }
         });
@@ -135,10 +139,537 @@ public class MatrixActivity extends AppCompatActivity {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                currentMatrix.setColumns(seekRows.getProgress());
+                currentMatrix.setColumns(seekColumns.getProgress() + 1);
                 update();
             }
         });
+
+        //  Set all TextChangedListeners
+        matrix[0][0].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[0][0].getText().toString().equals(""))
+                            currentMatrix.setValue(0, 0, 0);
+                        else
+                            currentMatrix.setValue(
+                                0, 0, Double.parseDouble(matrix[0][0].getText().toString()));
+                    }
+                });
+        matrix[0][1].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[0][1].getText().toString().equals(""))
+                            currentMatrix.setValue(0, 1, 0);
+                        else
+                            currentMatrix.setValue(
+                                0, 1, Double.parseDouble(matrix[0][1].getText().toString()));
+                    }
+                });
+        matrix[0][2].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[0][2].getText().toString().equals(""))
+                            currentMatrix.setValue(0, 2, 0);
+                        else
+                            currentMatrix.setValue(
+                                0, 2, Double.parseDouble(matrix[0][2].getText().toString()));
+                    }
+                });
+        matrix[0][3].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[0][3].getText().toString().equals(""))
+                            currentMatrix.setValue(0, 3, 0);
+                        else
+                            currentMatrix.setValue(
+                                0, 3, Double.parseDouble(matrix[0][3].getText().toString()));
+                    }
+                });
+        matrix[0][4].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[0][4].getText().toString().equals(""))
+                            currentMatrix.setValue(0, 4, 0);
+                        else
+                            currentMatrix.setValue(
+                                0, 4, Double.parseDouble(matrix[0][4].getText().toString()));
+                    }
+                });
+        matrix[1][0].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[1][0].getText().toString().equals(""))
+                            currentMatrix.setValue(1, 0, 0);
+                        else
+                            currentMatrix.setValue(
+                                1, 0, Double.parseDouble(matrix[1][0].getText().toString()));
+                    }
+                });
+        matrix[1][1].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[1][1].getText().toString().equals(""))
+                            currentMatrix.setValue(1, 1, 0);
+                        else
+                            currentMatrix.setValue(
+                                1, 1, Double.parseDouble(matrix[1][1].getText().toString()));
+                    }
+                });
+        matrix[1][2].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[1][2].getText().toString().equals(""))
+                            currentMatrix.setValue(1, 2, 0);
+                        else
+                            currentMatrix.setValue(
+                                1, 2, Double.parseDouble(matrix[1][2].getText().toString()));
+                    }
+                });
+        matrix[1][3].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[1][3].getText().toString().equals(""))
+                            currentMatrix.setValue(1, 3, 0);
+                        else
+                            currentMatrix.setValue(
+                                1, 3, Double.parseDouble(matrix[1][3].getText().toString()));
+                    }
+                });
+        matrix[1][4].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[1][4].getText().toString().equals(""))
+                            currentMatrix.setValue(1, 4, 0);
+                        else
+                            currentMatrix.setValue(
+                                1, 4, Double.parseDouble(matrix[1][4].getText().toString()));
+                    }
+                });
+        matrix[2][0].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[2][0].getText().toString().equals(""))
+                            currentMatrix.setValue(2, 0, 0);
+                        else
+                            currentMatrix.setValue(
+                                2, 0, Double.parseDouble(matrix[2][0].getText().toString()));
+                    }
+                });
+        matrix[2][1].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[2][1].getText().toString().equals(""))
+                            currentMatrix.setValue(2, 1, 0);
+                        else
+                            currentMatrix.setValue(
+                                2, 1, Double.parseDouble(matrix[2][1].getText().toString()));
+                    }
+                });
+        matrix[2][2].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[2][2].getText().toString().equals(""))
+                            currentMatrix.setValue(2, 2, 0);
+                        else
+                            currentMatrix.setValue(
+                                2, 2, Double.parseDouble(matrix[2][2].getText().toString()));
+                    }
+                });
+        matrix[2][3].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[2][3].getText().toString().equals(""))
+                            currentMatrix.setValue(2, 3, 0);
+                        else
+                            currentMatrix.setValue(
+                                2, 3, Double.parseDouble(matrix[2][3].getText().toString()));
+                    }
+                });
+        matrix[2][4].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[2][4].getText().toString().equals(""))
+                            currentMatrix.setValue(2, 4, 0);
+                        else
+                            currentMatrix.setValue(
+                                2, 4, Double.parseDouble(matrix[2][4].getText().toString()));
+                    }
+                });
+        matrix[3][0].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[3][0].getText().toString().equals(""))
+                            currentMatrix.setValue(3, 0, 0);
+                        else
+                            currentMatrix.setValue(
+                                3, 0, Double.parseDouble(matrix[3][0].getText().toString()));
+                    }
+                });
+        matrix[3][1].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[3][1].getText().toString().equals(""))
+                            currentMatrix.setValue(3, 1, 0);
+                        else
+                            currentMatrix.setValue(
+                                3, 1, Double.parseDouble(matrix[3][1].getText().toString()));
+                    }
+                });
+        matrix[3][2].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[3][2].getText().toString().equals(""))
+                            currentMatrix.setValue(3, 2, 0);
+                        else
+                            currentMatrix.setValue(
+                                3, 2, Double.parseDouble(matrix[3][2].getText().toString()));
+                    }
+                });
+        matrix[3][3].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[3][3].getText().toString().equals(""))
+                            currentMatrix.setValue(3, 3, 0);
+                        else
+                            currentMatrix.setValue(
+                                3, 3, Double.parseDouble(matrix[3][3].getText().toString()));
+                    }
+                });
+        matrix[3][4].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[3][4].getText().toString().equals(""))
+                            currentMatrix.setValue(3, 4, 0);
+                        else
+                            currentMatrix.setValue(
+                                3, 4, Double.parseDouble(matrix[3][4].getText().toString()));
+                    }
+                });
+        matrix[4][0].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[4][0].getText().toString().equals(""))
+                            currentMatrix.setValue(4, 0, 0);
+                        else
+                            currentMatrix.setValue(
+                                4, 0, Double.parseDouble(matrix[4][0].getText().toString()));
+                    }
+                });
+        matrix[4][1].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[4][1].getText().toString().equals(""))
+                            currentMatrix.setValue(4, 1, 0);
+                        else
+                            currentMatrix.setValue(
+                                4, 1, Double.parseDouble(matrix[4][1].getText().toString()));
+                    }
+                });
+        matrix[4][2].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[4][2].getText().toString().equals(""))
+                            currentMatrix.setValue(4, 2, 0);
+                        else
+                            currentMatrix.setValue(
+                                4, 2, Double.parseDouble(matrix[4][2].getText().toString()));
+                    }
+                });
+        matrix[4][3].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[4][3].getText().toString().equals(""))
+                            currentMatrix.setValue(4, 3, 0);
+                        else
+                            currentMatrix.setValue(
+                                4, 3, Double.parseDouble(matrix[4][3].getText().toString()));
+                    }
+                });
+        matrix[4][4].addTextChangedListener(new TextWatcher()  {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count)  {
+
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int aft )  {
+                        // Auto-generated method
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s)  {
+                        // Auto-generated method
+                        if (matrix[4][4].getText().toString().equals(""))
+                            currentMatrix.setValue(4, 4, 0);
+                        else
+                            currentMatrix.setValue(
+                                4, 4, Double.parseDouble(matrix[4][4].getText().toString()));
+                    }
+                });
     }
 
     @Override
@@ -157,7 +688,7 @@ public class MatrixActivity extends AppCompatActivity {
         intent.putExtras(b);
         intent.putExtra("columns", currentMatrix.getColumns());
         intent.putExtra("rows", currentMatrix.getRows());
-        intent.putExtra("name", 1);
+        intent.putExtra("name", type);
         setResult(RESULT_OK, intent);
         finish();
     }
@@ -169,20 +700,30 @@ public class MatrixActivity extends AppCompatActivity {
         for (int i = 0; i < 5; i++)
             for (int j = 0; j < 5; j++)
                 currentMatrix.setValue(i, j, numbers[i * 5 + j]);
+        type = bundle.getInt("name");
     }
 
     private void update() {
+        seekColumns.setProgress(currentMatrix.getColumns() - 1);
+        seekRows.setProgress(currentMatrix.getRows() - 1);
         for (int i = 0; i < 5; i++)
             for (int j = 0; j < 5; j++) {
                 matrix[i][j].setText(String.valueOf(currentMatrix.getValue(i, j)));
-                matrix[i][j].setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
+                if (matrix[i][j].getInputType() != InputType.TYPE_NUMBER_FLAG_DECIMAL) {
+                    //matrix[i][j].setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
+                    matrix[i][j].setTextColor(getResources().getColor(R.color.darkTextColor));
+                }
             }
         for (int i = currentMatrix.getColumns(); i < 5; i++)
-            for (int j = 0; j < 5; j++)
-                matrix[i][j].setInputType(InputType.TYPE_NULL);
-        for (int i = currentMatrix.getRows(); i < 5; i++)
-            for (int j = 0; j < 5; j++)
-                matrix[j][i].setInputType(InputType.TYPE_NULL);
+            for (int j = 0; j < 5; j++) {
+                //matrix[j][i].setInputType(InputType.TYPE_NULL);
+                matrix[j][i].setTextColor(getResources().getColor(R.color.colorAccent));
+            }
+        for (int i = 0; i < 5; i++)
+            for (int j = currentMatrix.getRows(); j < 5; j++) {
+               // matrix[i][j].setInputType(InputType.TYPE_NULL);
+                matrix[j][i].setTextColor(getResources().getColor(R.color.colorAccent));
+            }
     }
 
 }
