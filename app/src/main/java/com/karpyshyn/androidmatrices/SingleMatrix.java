@@ -1,4 +1,4 @@
-package com.tochanenko.karpyshyn.androidmatrices;
+package com.karpyshyn.androidmatrices;
 
 public class SingleMatrix {
     private double[][] values = new double[5][5];

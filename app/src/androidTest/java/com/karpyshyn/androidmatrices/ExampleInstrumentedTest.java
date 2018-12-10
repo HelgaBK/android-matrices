@@ -1,4 +1,4 @@
-package com.tochanenko.karpyshyn.androidmatrices;
+package com.karpyshyn.androidmatrices;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.tochanenko.karpyshyn.androidmatrices", appContext.getPackageName());
+        assertEquals("com.karpyshyn.androidmatrices", appContext.getPackageName());
     }
 }

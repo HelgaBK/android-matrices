@@ -1,4 +1,4 @@
-package com.tochanenko.karpyshyn.androidmatrices;
+package com.karpyshyn.androidmatrices;
 
 import org.junit.Test;
 
