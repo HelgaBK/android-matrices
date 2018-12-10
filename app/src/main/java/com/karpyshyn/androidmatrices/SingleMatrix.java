@@ -53,7 +53,7 @@ public class SingleMatrix {
              this.values[x][y] = number;
     }
 
-    public SingleMatrix addMatrixes(SingleMatrix a, SingleMatrix b) {
+    public SingleMatrix addMatrices(SingleMatrix a, SingleMatrix b) {
         SingleMatrix res = new SingleMatrix();
         res.columns = Math.max(a.columns, b.columns);
         res.rows = Math.max(a.rows, b.rows);
@@ -63,7 +63,7 @@ public class SingleMatrix {
         return res;
     }
 
-    public SingleMatrix subMatrixes(SingleMatrix a, SingleMatrix b) {
+    public SingleMatrix subMatrices(SingleMatrix a, SingleMatrix b) {
         SingleMatrix res = new SingleMatrix();
         res.columns = Math.max(a.columns, b.columns);
         res.rows = Math.max(a.rows, b.rows);
@@ -73,4 +73,14 @@ public class SingleMatrix {
         return res;
     }
 
+    public SingleMatrix multiplyMatrices(SingleMatrix a, SingleMatrix b) {
+        SingleMatrix res = new SingleMatrix();
+        res.columns = b.columns;
+        res.rows = a.rows;
+        for (int i = 0; i < res.rows; i++)
+            for (int j = 0; j < res.columns; j++)
+                for (int k = 0; k < b.rows; k++)
+                    res.values[i][j] = a.values[i][k] + b.values[k][j];
+        return res;
+    }
 }

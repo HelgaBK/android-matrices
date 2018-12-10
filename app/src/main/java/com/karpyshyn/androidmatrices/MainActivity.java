@@ -137,12 +137,13 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (selected) {
                     case ADDITION:
-                        res = res.addMatrixes(dataA, dataB);
+                        res = res.addMatrices(dataA, dataB);
                         break;
                     case SUBTRACTION:
-                        res = res.subMatrixes(dataA, dataB);
+                        res = res.subMatrices(dataA, dataB);
                         break;
                     case MULTIPLY:
+                        res = res.multiplyMatrices(dataA, dataB);
                         break;
                     case INVERSE:
                         break;
