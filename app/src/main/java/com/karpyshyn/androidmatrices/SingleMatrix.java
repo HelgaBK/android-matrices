@@ -52,4 +52,25 @@ public class SingleMatrix {
          if (x < 5 && y < 5)
              this.values[x][y] = number;
     }
+
+    public SingleMatrix addMatrixes(SingleMatrix a, SingleMatrix b) {
+        SingleMatrix res = new SingleMatrix();
+        res.columns = Math.max(a.columns, b.columns);
+        res.rows = Math.max(a.rows, b.rows);
+        for (int i = 0; i < 5; i++)
+            for (int j = 0; j < 5; j++)
+                res.values[i][j] = a.values[i][j] + b.values[i][j];
+        return res;
+    }
+
+    public SingleMatrix subMatrixes(SingleMatrix a, SingleMatrix b) {
+        SingleMatrix res = new SingleMatrix();
+        res.columns = Math.max(a.columns, b.columns);
+        res.rows = Math.max(a.rows, b.rows);
+        for (int i = 0; i < 5; i++)
+            for (int j = 0; j < 5; j++)
+                res.values[i][j] = a.values[i][j] - b.values[i][j];
+        return res;
+    }
+
 }

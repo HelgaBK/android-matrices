@@ -4,14 +4,20 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    //  Operators
+    enum Operators {ADDITION, SUBTRACTION, MULTIPLY, TRANSPOSITION, INVERSE };
 
     //  Data classes of each Matrix
     SingleMatrix dataA = new SingleMatrix();
@@ -27,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
     //  A res matrix
     TextView[][] matrix = new TextView[5][5];
+
+    //  Button
+    Button buttonCalculate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
         matrix[4][3] = findViewById(R.id.textView4_3);
         matrix[4][4] = findViewById(R.id.textView4_4);
 
+        buttonCalculate = findViewById(R.id.buttonCalculate);
+
         update();
 
         //  Input matrices
@@ -108,6 +119,41 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("rows", dataB.getRows());
                 intent.putExtra("name", 1);
                 startActivityForResult(intent, 1);
+            }
+        });
+
+        buttonCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                update();
+            }
+        });
+
+        operators.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent,
+                                       View itemSelected, int selectedItemPosition, long selectedId) {
+                Operators operators[] = Operators.values();
+                Operators selected = operators[selectedItemPosition];
+
+                switch (selected) {
+                    case ADDITION:
+                        res = res.addMatrixes(dataA, dataB);
+                        break;
+                    case SUBTRACTION:
+                        res = res.subMatrixes(dataA, dataB);
+                        break;
+                    case MULTIPLY:
+                        break;
+                    case INVERSE:
+                        break;
+                    case TRANSPOSITION:
+                        break;
+                }
+            }
+
+            public void onNothingSelected(AdapterView<?> parent) {
+                Toast toast = Toast.makeText(getApplicationContext(), "Choose operator", Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
     }
